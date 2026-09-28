@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página no encontrada | David Rodríguez San Miguel</title>
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Rutas absolutas: GitHub Pages muestra esta página en cualquier URL que no exista -->
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'light' || theme === 'dark') document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <main class="container not-found">
+    <p class="not-found__code">404</p>
+    <h1 class="not-found__title">Esta página no existe</h1>
+    <p class="not-found__text">Puede que el enlace esté mal escrito o que la página se haya movido.</p>
+    <a class="btn btn--primary" href="/">Volver al inicio</a>
+  </main>
+</body>
+</html>

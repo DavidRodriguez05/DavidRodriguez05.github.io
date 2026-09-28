@@ -1,27 +1,787 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Rodríguez | Desarrollador</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>David Rodríguez San Miguel | Desarrollador web y multiplataforma</title>
+  <meta name="description" content="David Rodríguez San Miguel, desarrollador junior web y multiplataforma en Madrid. Proyectos con Java, Spring Boot, Flutter, PHP y MySQL.">
+  <meta name="author" content="David Rodríguez San Miguel">
+  <link rel="canonical" href="https://davidrodriguez05.github.io/">
+
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f3f6f5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111917" media="(prefers-color-scheme: dark)">
+
+  <!-- Open Graph: vista previa al compartir el enlace (LinkedIn, WhatsApp...) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="David Rodríguez San Miguel">
+  <meta property="og:title" content="David Rodríguez San Miguel | Desarrollador web y multiplataforma">
+  <meta property="og:description" content="Desarrollador junior web y multiplataforma en Madrid. Proyectos con Java, Spring Boot, Flutter, PHP y MySQL.">
+  <meta property="og:url" content="https://davidrodriguez05.github.io/">
+  <meta property="og:image" content="https://davidrodriguez05.github.io/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="David Rodríguez San Miguel, desarrollador de aplicaciones web y multiplataforma">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Aplica el tema guardado antes de pintar la página (evita el parpadeo) -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'light' || theme === 'dark') root.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+  <script src="js/script.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "David Rodríguez San Miguel",
+    "jobTitle": "Desarrollador de aplicaciones web y multiplataforma",
+    "url": "https://davidrodriguez05.github.io/",
+    "email": "mailto:davidrsm051205@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Alcorcón",
+      "addressRegion": "Madrid",
+      "addressCountry": "ES"
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "CDM Escuela de Profesiones Digitales"
+    },
+    "knowsLanguage": ["es", "en"],
+    "knowsAbout": ["Java", "Spring Boot", "Flutter", "PHP", "Laravel", "MySQL", "Docker"],
+    "sameAs": [
+      "https://www.linkedin.com/in/david-rodr%C3%ADguez-san-miguel-a2ba432a8/",
+      "https://github.com/DavidRodriguez05"
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-    <h1>David Rodríguez</h1>
+  <!-- Iconos (se usan con <svg><use href="#i-nombre"></use></svg>) -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-logo" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="16" fill="#13201e"/>
+      <g fill="none" stroke="#55d1bb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 17v30h4a15 15 0 0 0 0-30z"/>
+        <path d="M37 47V17h8a8 8 0 0 1 0 16h-8"/>
+        <path d="M44 33l10 14"/>
+      </g>
+    </symbol>
+    <symbol id="i-github" viewBox="0 0 16 16">
+      <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+    </symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="5" width="18" height="14" rx="2.5"/>
+        <path d="m4 7 8 6 8-6"/>
+      </g>
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 4v11"/>
+        <path d="m7 10.5 5 5 5-5"/>
+        <path d="M5 20h14"/>
+      </g>
+    </symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="9" width="11" height="11" rx="2"/>
+        <path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/>
+      </g>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m5 12.5 4.5 4.5L19 7.5"/>
+      </g>
+    </symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4.5" y="10.5" width="15" height="10" rx="2"/>
+        <path d="M8 10.5v-3a4 4 0 0 1 8 0v3"/>
+      </g>
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/>
+      </g>
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>
+      </g>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </g>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M6 6l12 12M18 6 6 18"/>
+      </g>
+    </symbol>
+  </svg>
 
-    <h2>Desarrollador de aplicaciones</h2>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="#inicio">
+        <svg class="logo__mark" aria-hidden="true"><use href="#i-logo"></use></svg>
+        <span class="visually-hidden">David Rodríguez, ir al inicio</span>
+      </a>
 
-    <p>
-        Java · Spring Boot · Flutter · Laravel · PHP · MySQL · Docker
-    </p>
+      <nav class="nav" aria-label="Principal">
+        <button class="nav__toggle icon-button" type="button" aria-expanded="false" aria-controls="menu">
+          <svg class="icon nav__icon-open" aria-hidden="true"><use href="#i-menu"></use></svg>
+          <svg class="icon nav__icon-close" aria-hidden="true"><use href="#i-close"></use></svg>
+          <span class="visually-hidden">Menú</span>
+        </button>
+        <ul class="nav__list" id="menu">
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#tecnologias">Tecnologías</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#formacion">Formación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
 
-    <h2>Proyectos</h2>
+      <button class="theme-toggle icon-button" type="button" aria-label="Cambiar entre tema claro y oscuro">
+        <svg class="icon theme-toggle__moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+        <svg class="icon theme-toggle__sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+      </button>
+    </div>
+  </header>
 
-    <h3>HabitFlow</h3>
-    <p>
-        Aplicación multiplataforma para gestión de hábitos.
-    </p>
+  <main id="contenido">
 
+    <!-- ============ PRESENTACIÓN ============ -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__intro">
+          <p class="status"><span class="status__dot" aria-hidden="true"></span>Disponible para trabajar</p>
+          <h1 class="hero__name" id="hero-title">David Rodríguez</h1>
+          <p class="hero__role">Desarrollador de aplicaciones web y multiplataforma</p>
+          <p class="hero__lead">Perfil junior, titulado en DAW y DAM y con preferencia por el backend. Vivo en Alcorcón, Madrid.</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn--ghost" href="assets/cv/CV-David-Rodriguez-San-Miguel.pdf" download>
+              <svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg>
+              Descargar CV
+            </a>
+          </div>
+
+          <ul class="social">
+            <li>
+              <a href="https://github.com/DavidRodriguez05" target="_blank" rel="me noopener noreferrer">
+                <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
+                GitHub<span class="visually-hidden"> (se abre en una pestaña nueva)</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/david-rodr%C3%ADguez-san-miguel-a2ba432a8/" target="_blank" rel="me noopener noreferrer">
+                <svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+                LinkedIn<span class="visually-hidden"> (se abre en una pestaña nueva)</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:davidrsm051205@gmail.com">
+                <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+                Email
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tarjeta decorativa: toda su información aparece también en el resto de la página -->
+        <div class="api-card" aria-hidden="true">
+          <div class="api-card__bar">
+            <span class="api-card__method">GET</span>
+            <span class="api-card__path">/api/perfil</span>
+          </div>
+          <div class="api-card__body">
+            <p class="api-card__status"><span class="api-card__ok">200 OK</span> application/json</p>
+            <code class="json">
+              <span class="ln"><span class="p">{</span></span>
+              <span class="ln d1"><span class="k">"nombre"</span><span class="p">:</span> <span class="s">"David Rodríguez San Miguel"</span><span class="p">,</span></span>
+              <span class="ln d1"><span class="k">"rol"</span><span class="p">:</span> <span class="s">"Desarrollador web y multiplataforma"</span><span class="p">,</span></span>
+              <span class="ln d1"><span class="k">"nivel"</span><span class="p">:</span> <span class="s">"junior"</span><span class="p">,</span></span>
+              <span class="ln d1"><span class="k">"disponible"</span><span class="p">:</span> <span class="b">true</span><span class="json__pulse"></span><span class="p">,</span></span>
+              <span class="ln d1"><span class="k">"ubicacion"</span><span class="p">:</span> <span class="s">"Alcorcón, Madrid"</span><span class="p">,</span></span>
+              <span class="ln d1"><span class="k">"modalidad"</span><span class="p">:</span> <span class="p">[</span><span class="s">"presencial"</span><span class="p">,</span> <span class="s">"híbrido"</span><span class="p">,</span> <span class="s">"remoto"</span><span class="p">],</span></span>
+              <span class="ln d1"><span class="k">"idiomas"</span><span class="p">:</span> <span class="p">{</span> <span class="k">"es"</span><span class="p">:</span> <span class="s">"nativo"</span><span class="p">,</span> <span class="k">"en"</span><span class="p">:</span> <span class="s">"B1"</span> <span class="p">},</span></span>
+              <span class="ln d1"><span class="k">"stack"</span><span class="p">:</span> <span class="p">[</span><span class="s">"Java"</span><span class="p">,</span> <span class="s">"Spring Boot"</span><span class="p">,</span> <span class="s">"Flutter"</span><span class="p">,</span> <span class="s">"PHP"</span><span class="p">,</span> <span class="s">"Laravel"</span><span class="p">,</span> <span class="s">"MySQL"</span><span class="p">,</span> <span class="s">"Docker"</span><span class="p">]</span></span>
+              <span class="ln"><span class="p">}</span></span>
+            </code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE MÍ ============ -->
+    <section class="section" id="sobre-mi" aria-labelledby="sobre-mi-title">
+      <div class="container section__grid">
+        <h2 class="section__title" id="sobre-mi-title">Sobre mí</h2>
+        <div class="section__body reveal">
+          <div class="about">
+            <div class="prose">
+              <p>Soy desarrollador junior titulado en DAW y DAM, con preferencia por el backend. Me gusta seguir aprendiendo, construir software que sea útil para quien lo usa y trabajar en equipo echando una mano a mis compañeros.</p>
+              <p>Empecé en Sistemas Microinformáticos y Redes montando y manteniendo equipos, pasé al desarrollo web con DAW y terminé DAM en 2026. Por el camino he hecho prácticas en tres empresas, y ahora estoy aprendiendo Laravel mientras rehago una aplicación que ya usa una empresa.</p>
+            </div>
+            <dl class="facts">
+              <div class="facts__row">
+                <dt>Ubicación</dt>
+                <dd>Alcorcón, Madrid</dd>
+              </div>
+              <div class="facts__row">
+                <dt>Busco</dt>
+                <dd>Empleo como desarrollador junior</dd>
+              </div>
+              <div class="facts__row">
+                <dt>Modalidad</dt>
+                <dd>Presencial o híbrido en Madrid y alrededores, o remoto</dd>
+              </div>
+              <div class="facts__row">
+                <dt>Idiomas</dt>
+                <dd>Español nativo, inglés B1 (Cambridge)</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TECNOLOGÍAS ============ -->
+    <!-- chip--main = tecnologías con las que más has trabajado. Añade o quita la clase para cambiarlo. -->
+    <section class="section" id="tecnologias" aria-labelledby="tecnologias-title">
+      <div class="container section__grid">
+        <h2 class="section__title" id="tecnologias-title">Tecnologías</h2>
+        <div class="section__body reveal">
+          <ul class="legend">
+            <li class="legend__item"><span class="legend__swatch legend__swatch--main" aria-hidden="true"></span>Uso habitual</li>
+            <li class="legend__item"><span class="legend__swatch" aria-hidden="true"></span>También he trabajado con ellas</li>
+          </ul>
+
+          <div class="stack">
+            <div class="stack__group">
+              <h3 class="stack__title">Backend</h3>
+              <ul class="chips">
+                <li class="chip chip--main">Java<span class="visually-hidden">, uso habitual</span></li>
+                <li class="chip chip--main">PHP<span class="visually-hidden">, uso habitual</span></li>
+                <li class="chip chip--main">APIs REST<span class="visually-hidden">, uso habitual</span></li>
+                <li class="chip">Spring Boot</li>
+                <li class="chip">Laravel</li>
+                <li class="chip">Symfony</li>
+                <li class="chip">JWT</li>
+                <li class="chip">Swagger</li>
+              </ul>
+            </div>
+
+            <div class="stack__group">
+              <h3 class="stack__title">Frontend</h3>
+              <ul class="chips">
+                <li class="chip chip--main">HTML<span class="visually-hidden">, uso habitual</span></li>
+                <li class="chip chip--main">CSS<span class="visually-hidden">, uso habitual</span></li>
+                <li class="chip chip--main">Tailwind CSS<span class="visually-hidden">, uso habitual</span></li>
+                <li class="chip">JavaScript</li>
+                <li class="chip">React</li>
+                <li class="chip">Bootstrap</li>
+              </ul>
+            </div>
+
+            <div class="stack__group">
+              <h3 class="stack__title">Móvil y multiplataforma</h3>
+              <ul class="chips">
+                <li class="chip">Flutter</li>
+                <li class="chip">Dart</li>
+              </ul>
+            </div>
+
+            <div class="stack__group">
+              <h3 class="stack__title">Bases de datos</h3>
+              <ul class="chips">
+                <li class="chip chip--main">SQL<span class="visually-hidden">, uso habitual</span></li>
+                <li class="chip chip--main">MySQL<span class="visually-hidden">, uso habitual</span></li>
+                <li class="chip chip--main">MariaDB<span class="visually-hidden">, uso habitual</span></li>
+              </ul>
+            </div>
+
+            <div class="stack__group">
+              <h3 class="stack__title">CMS</h3>
+              <ul class="chips">
+                <li class="chip chip--main">WordPress<span class="visually-hidden">, uso habitual</span></li>
+                <li class="chip chip--main">Elementor<span class="visually-hidden">, uso habitual</span></li>
+              </ul>
+            </div>
+
+            <div class="stack__group">
+              <h3 class="stack__title">DevOps y control de versiones</h3>
+              <ul class="chips">
+                <li class="chip chip--main">Git<span class="visually-hidden">, uso habitual</span></li>
+                <li class="chip chip--main">GitHub<span class="visually-hidden">, uso habitual</span></li>
+                <li class="chip">Docker</li>
+                <li class="chip">Docker Compose</li>
+                <li class="chip">Linux</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="tools"><strong>Herramientas:</strong> VS Code, IntelliJ IDEA, Android Studio y Postman.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROYECTOS ============ -->
+    <!--
+      Enlace a GitHub de cada proyecto:
+        data-repo-public="false"  → muestra "Código fuente privado"
+        data-repo-public="true"   → muestra el enlace "Ver código en GitHub"
+      Cuando hagas público un repositorio, cambia false por true (y revisa la URL del href).
+
+      Capturas: sustituye el <svg class="cover"> de .project__media por
+        <img src="assets/images/nombre.webp" alt="Descripción de la captura" width="1280" height="720" loading="lazy" decoding="async">
+    -->
+    <section class="section" id="proyectos" aria-labelledby="proyectos-title">
+      <div class="container section__grid">
+        <h2 class="section__title" id="proyectos-title">Proyectos</h2>
+        <div class="section__body">
+          <p class="section__intro reveal">Los tres proyectos que mejor muestran lo que sé hacer. Dos son mis proyectos finales de ciclo; el tercero lo usa una empresa real.</p>
+
+          <div class="projects">
+
+            <!-- HabitFlow -->
+            <article class="project project--featured reveal" aria-labelledby="p-habitflow">
+              <div class="project__media">
+                <svg class="cover" viewBox="70 6 180 188" aria-hidden="true" focusable="false">
+                  <rect class="cover__frame" x="110" y="14" width="100" height="172" rx="18"/>
+                  <rect class="cover__bar" x="126" y="32" width="38" height="7" rx="3.5"/>
+                  <circle class="cover__accent" cx="186" cy="35.5" r="6"/>
+                  <circle class="cover__soft" cx="195" cy="35.5" r="6"/>
+                  <circle class="cover__accent" cx="132" cy="62" r="7"/>
+                  <path class="cover__tick" d="m128.5 62 2.5 2.5 4.5-5"/>
+                  <rect class="cover__bar" x="146" y="58" width="48" height="8" rx="4"/>
+                  <circle class="cover__accent" cx="132" cy="88" r="7"/>
+                  <path class="cover__tick" d="m128.5 88 2.5 2.5 4.5-5"/>
+                  <rect class="cover__bar" x="146" y="84" width="36" height="8" rx="4"/>
+                  <circle class="cover__ring" cx="132" cy="114" r="6.25"/>
+                  <rect class="cover__bar" x="146" y="110" width="44" height="8" rx="4"/>
+                  <circle class="cover__accent" cx="132" cy="140" r="7"/>
+                  <path class="cover__tick" d="m128.5 140 2.5 2.5 4.5-5"/>
+                  <rect class="cover__bar" x="146" y="136" width="30" height="8" rx="4"/>
+                  <rect class="cover__accent" x="126" y="162" width="10" height="10" rx="3"/>
+                  <rect class="cover__accent" x="139" y="162" width="10" height="10" rx="3"/>
+                  <rect class="cover__accent" x="152" y="162" width="10" height="10" rx="3"/>
+                  <rect class="cover__soft" x="165" y="162" width="10" height="10" rx="3"/>
+                  <rect class="cover__accent" x="178" y="162" width="10" height="10" rx="3"/>
+                </svg>
+              </div>
+
+              <div class="project__content">
+                <ul class="tags">
+                  <li class="tag">Proyecto final de DAM</li>
+                  <li class="tag tag--done">Terminado</li>
+                </ul>
+                <h3 class="project__title" id="p-habitflow">HabitFlow</h3>
+                <p class="project__summary">Aplicación para crear hábitos y seguir tu progreso, con un apartado social para conectar con otras personas.</p>
+
+                <ul class="features">
+                  <li>Crear hábitos y registrar tu progreso.</li>
+                  <li>Estadísticas para ver cómo vas.</li>
+                  <li>Logros y retos para mantener la motivación.</li>
+                  <li>Apartado social: amistades y grupos con chat e invitaciones.</li>
+                  <li>Una sola base de código en Flutter para Android, iOS y web.</li>
+                </ul>
+
+                <ul class="chips chips--small">
+                  <li class="chip">Flutter</li>
+                  <li class="chip">Dart</li>
+                  <li class="chip">Java</li>
+                  <li class="chip">Spring Boot</li>
+                  <li class="chip">Spring Security</li>
+                  <li class="chip">JWT</li>
+                  <li class="chip">MySQL</li>
+                  <li class="chip">Docker</li>
+                </ul>
+
+                <details class="details">
+                  <summary>Detalles técnicos</summary>
+                  <dl class="details__list">
+                    <div>
+                      <dt>Arquitectura</dt>
+                      <dd>App en Flutter que consume una API REST propia hecha en Java 21 con Spring Boot, organizada por áreas: autenticación, hábitos, estadísticas, retos, perfil y social.</dd>
+                    </div>
+                    <div>
+                      <dt>Seguridad y datos</dt>
+                      <dd>Autenticación con Spring Security y JWT, con tokens de refresco. Datos en MySQL con JPA y un esquema versionado con migraciones de Flyway. La API está documentada con OpenAPI (Swagger).</dd>
+                    </div>
+                    <div>
+                      <dt>Despliegue</dt>
+                      <dd>Docker Compose tanto para desarrollo como para producción, con la configuración sensible en variables de entorno y preparado para desplegarse en un VPS.</dd>
+                    </div>
+                    <div>
+                      <dt>Mi papel</dt>
+                      <dd>Proyecto individual: desarrollé la app y la API, tomé todas las decisiones técnicas y resolví los problemas que fueron surgiendo.</dd>
+                    </div>
+                    <div>
+                      <dt>Lo que más me gusta</dt>
+                      <dd>El apartado social de la aplicación.</dd>
+                    </div>
+                    <div>
+                      <dt>Lo que aprendí</dt>
+                      <dd>A diseñar y construir mi propia API y a consumirla desde una app multiplataforma.</dd>
+                    </div>
+                    <div>
+                      <dt>Estado</dt>
+                      <dd>Terminado. La app no está publicada en tiendas.</dd>
+                    </div>
+                  </dl>
+                </details>
+
+                <div class="project__links" data-repo-public="true">
+                  <a class="repo-link" href="https://github.com/DavidRodriguez05/HabitFlow" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
+                    Ver código en GitHub<span class="visually-hidden"> (se abre en una pestaña nueva)</span>
+                  </a>
+                  <span class="repo-private">
+                    <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg>
+                    Código fuente privado
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <!-- FlowManager -->
+            <article class="project reveal" aria-labelledby="p-flowmanager">
+              <div class="project__media">
+                <svg class="cover" viewBox="0 0 320 200" aria-hidden="true" focusable="false">
+                  <rect class="cover__frame" x="36" y="22" width="248" height="156" rx="12"/>
+                  <path class="cover__line" d="M36 44h248"/>
+                  <circle class="cover__soft" cx="52" cy="33" r="3.5"/>
+                  <circle class="cover__soft" cx="64" cy="33" r="3.5"/>
+                  <circle class="cover__soft" cx="76" cy="33" r="3.5"/>
+                  <rect class="cover__bar" x="54" y="58" width="40" height="6" rx="3"/>
+                  <rect class="cover__card" x="54" y="72" width="64" height="24" rx="5"/>
+                  <rect class="cover__card" x="54" y="102" width="64" height="24" rx="5"/>
+                  <rect class="cover__card" x="54" y="132" width="64" height="24" rx="5"/>
+                  <rect class="cover__bar" x="128" y="58" width="48" height="6" rx="3"/>
+                  <rect class="cover__accent" x="128" y="72" width="64" height="24" rx="5"/>
+                  <rect class="cover__card" x="128" y="102" width="64" height="24" rx="5"/>
+                  <rect class="cover__bar" x="202" y="58" width="34" height="6" rx="3"/>
+                  <rect class="cover__card" x="202" y="72" width="64" height="24" rx="5"/>
+                  <circle class="cover__soft" cx="252" cy="120" r="7"/>
+                  <circle class="cover__accent" cx="242" cy="120" r="7"/>
+                </svg>
+              </div>
+
+              <div class="project__content">
+                <ul class="tags">
+                  <li class="tag">Proyecto final de DAW</li>
+                  <li class="tag tag--done">Terminado</li>
+                </ul>
+                <h3 class="project__title" id="p-flowmanager">FlowManager</h3>
+                <p class="project__summary">Gestor de tareas y proyectos en línea para organizarte tú solo o con tu equipo.</p>
+
+                <ul class="features">
+                  <li>Proyectos compartidos: invitas a otras personas por email y cada miembro tiene sus permisos.</li>
+                  <li>Tareas con filtros y archivos adjuntos.</li>
+                  <li>Avisos por email de las tareas pendientes.</li>
+                  <li>Panel de estadísticas con gráficos.</li>
+                  <li>Asistente con IA conectado a la API de OpenAI.</li>
+                </ul>
+
+                <ul class="chips chips--small">
+                  <li class="chip">PHP</li>
+                  <li class="chip">MySQL</li>
+                  <li class="chip">JavaScript</li>
+                  <li class="chip">Tailwind CSS</li>
+                  <li class="chip">React</li>
+                </ul>
+
+                <details class="details">
+                  <summary>Detalles técnicos</summary>
+                  <dl class="details__list">
+                    <div>
+                      <dt>Arquitectura</dt>
+                      <dd>PHP sin frameworks y MySQL, con un modelo de datos de seis tablas diseñado antes con un diagrama UML. Interfaz con Tailwind CSS y Flowbite, y validación de formularios en JavaScript.</dd>
+                    </div>
+                    <div>
+                      <dt>Panel de estadísticas</dt>
+                      <dd>Aplicación en React (Vite y Recharts) que consume endpoints PHP que devuelven JSON.</dd>
+                    </div>
+                    <div>
+                      <dt>Cuentas y avisos</dt>
+                      <dd>Contraseñas cifradas con <code>password_hash</code>, recuperación de contraseña por email y avisos automáticos con PHPMailer y una tarea programada (cron).</dd>
+                    </div>
+                    <div>
+                      <dt>El mayor reto</dt>
+                      <dd>Los permisos entre los miembros de un proyecto compartido.</dd>
+                    </div>
+                    <div>
+                      <dt>Lo que aprendí</dt>
+                      <dd>Consolidé PHP sin frameworks: sesiones, subida de archivos, envío de emails y endpoints JSON.</dd>
+                    </div>
+                  </dl>
+                </details>
+
+                <!-- FlowManager: cambia false por true SOLO cuando el repositorio ya no tenga claves ni datos personales -->
+                <div class="project__links" data-repo-public="false">
+                  <a class="repo-link" href="https://github.com/DavidRodriguez05/FlowManager" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
+                    Ver código en GitHub<span class="visually-hidden"> (se abre en una pestaña nueva)</span>
+                  </a>
+                  <span class="repo-private">
+                    <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg>
+                    Código fuente privado
+                  </span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Gestión de mantenimiento (proyecto para una empresa: código privado) -->
+            <article class="project reveal" aria-labelledby="p-mantenimiento">
+              <div class="project__media">
+                <svg class="cover" viewBox="0 0 320 200" aria-hidden="true" focusable="false">
+                  <rect class="cover__frame" x="36" y="22" width="248" height="156" rx="12"/>
+                  <rect class="cover__bar" x="56" y="40" width="70" height="7" rx="3.5"/>
+                  <path class="cover__line" d="M56 62h208M56 90h208M56 118h208M56 146h208"/>
+                  <circle class="cover__soft" cx="62" cy="76" r="5"/>
+                  <rect class="cover__bar" x="76" y="72" width="80" height="8" rx="4"/>
+                  <rect class="cover__card" x="214" y="71" width="50" height="10" rx="5"/>
+                  <circle class="cover__accent" cx="62" cy="104" r="5"/>
+                  <rect class="cover__bar" x="76" y="100" width="64" height="8" rx="4"/>
+                  <rect class="cover__accent" x="214" y="99" width="50" height="10" rx="5"/>
+                  <circle class="cover__soft" cx="62" cy="132" r="5"/>
+                  <rect class="cover__bar" x="76" y="128" width="92" height="8" rx="4"/>
+                  <rect class="cover__card" x="214" y="127" width="50" height="10" rx="5"/>
+                  <circle class="cover__soft" cx="62" cy="160" r="5"/>
+                  <rect class="cover__bar" x="76" y="156" width="56" height="8" rx="4"/>
+                  <rect class="cover__card" x="214" y="155" width="50" height="10" rx="5"/>
+                </svg>
+              </div>
+
+              <div class="project__content">
+                <ul class="tags">
+                  <li class="tag">Proyecto real</li>
+                  <li class="tag tag--wip">En desarrollo</li>
+                </ul>
+                <h3 class="project__title" id="p-mantenimiento">Gestión de mantenimiento</h3>
+                <p class="project__summary">Aplicación web para que una empresa gestione sus máquinas y las incidencias que surgen en ellas.</p>
+
+                <ul class="features">
+                  <li>La primera versión, hecha en PHP sin frameworks, ya está en uso en la empresa.</li>
+                  <li>Ahora la estoy rehaciendo en Laravel, con arquitectura MVC y Eloquent ORM.</li>
+                  <li>La desarrollo yo solo.</li>
+                </ul>
+
+                <ul class="chips chips--small">
+                  <li class="chip">PHP</li>
+                  <li class="chip">Laravel</li>
+                </ul>
+
+                <div class="project__links" data-repo-public="false">
+                  <span class="repo-private">
+                    <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg>
+                    Código fuente privado: el código y los datos pertenecen a la empresa
+                  </span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCIA ============ -->
+    <section class="section" id="experiencia" aria-labelledby="experiencia-title">
+      <div class="container section__grid">
+        <h2 class="section__title" id="experiencia-title">Experiencia</h2>
+        <div class="section__body">
+          <p class="section__intro reveal">Tres periodos de prácticas, uno por cada ciclo formativo.</p>
+
+          <ol class="timeline">
+            <li class="timeline__item reveal">
+              <p class="timeline__date"><time datetime="2026-03">Marzo</time> – <time datetime="2026-06">junio 2026</time></p>
+              <h3 class="timeline__role">Programador full stack</h3>
+              <p class="timeline__org">Imagar Solutions Company</p>
+              <p class="timeline__meta">Prácticas (FCT de DAM). Presencial, Alcorcón.</p>
+              <ul class="timeline__list">
+                <li>Desarrollo full stack con Symfony de una aplicación interna de gestión de personas.</li>
+                <li>Diseño, consulta y administración de bases de datos relacionales.</li>
+                <li>Trabajo en equipo con Git y GitHub.</li>
+              </ul>
+              <ul class="chips chips--small">
+                <li class="chip">PHP</li>
+                <li class="chip">Symfony</li>
+                <li class="chip">SQL</li>
+                <li class="chip">Git</li>
+                <li class="chip">GitHub</li>
+              </ul>
+            </li>
+
+            <li class="timeline__item reveal">
+              <p class="timeline__date"><time datetime="2025-03">Marzo</time> – <time datetime="2025-06">junio 2025</time></p>
+              <h3 class="timeline__role">Desarrollador de aplicaciones web</h3>
+              <p class="timeline__org">YoSEO Marketing</p>
+              <p class="timeline__meta">Prácticas (FCT de DAW). Presencial, Madrid.</p>
+              <ul class="timeline__list">
+                <li>Maquetación y desarrollo de sitios web con WordPress y Elementor.</li>
+                <li>Gestión, migración y mantenimiento de webs.</li>
+                <li>Montaje de equipos informáticos.</li>
+              </ul>
+              <ul class="chips chips--small">
+                <li class="chip">WordPress</li>
+                <li class="chip">Elementor</li>
+                <li class="chip">PHP</li>
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+                <li class="chip">JavaScript</li>
+              </ul>
+            </li>
+
+            <li class="timeline__item reveal">
+              <p class="timeline__date"><time datetime="2023-03">Marzo</time> – <time datetime="2023-06">junio 2023</time></p>
+              <h3 class="timeline__role">Técnico de sistemas informáticos</h3>
+              <p class="timeline__org">Accuro Technology</p>
+              <p class="timeline__meta">Prácticas (FCT de SMR). Híbrido, Las Rozas de Madrid.</p>
+              <ul class="timeline__list">
+                <li>Desarrollo de un chatbot para una web, que llegó a estar en funcionamiento.</li>
+                <li>Mantenimiento de webs en WordPress.</li>
+                <li>Montaje, diagnóstico y mantenimiento de equipos, y soporte técnico a usuarios.</li>
+              </ul>
+              <ul class="chips chips--small">
+                <li class="chip">WordPress</li>
+                <li class="chip">PHP</li>
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FORMACIÓN ============ -->
+    <section class="section" id="formacion" aria-labelledby="formacion-title">
+      <div class="container section__grid">
+        <h2 class="section__title" id="formacion-title">Formación</h2>
+        <div class="section__body reveal">
+          <div class="edu">
+            <ol class="timeline">
+              <li class="timeline__item">
+                <p class="timeline__date"><time datetime="2025">2025</time> – <time datetime="2026">2026</time></p>
+                <h3 class="timeline__role">Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</h3>
+                <p class="timeline__org">CDM Escuela de Profesiones Digitales, Alcorcón</p>
+                <p class="timeline__meta">Cursado en un año como doble titulación con DAW. Proyecto final: HabitFlow.</p>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__date"><time datetime="2023">2023</time> – <time datetime="2025">2025</time></p>
+                <h3 class="timeline__role">Técnico Superior en Desarrollo de Aplicaciones Web (DAW)</h3>
+                <p class="timeline__org">CDM Escuela de Profesiones Digitales, Alcorcón</p>
+                <p class="timeline__meta">Proyecto final: FlowManager.</p>
+              </li>
+              <li class="timeline__item">
+                <p class="timeline__date"><time datetime="2021">2021</time> – <time datetime="2023">2023</time></p>
+                <h3 class="timeline__role">Técnico en Sistemas Microinformáticos y Redes (SMR)</h3>
+                <p class="timeline__org">CDM Escuela de Profesiones Digitales, Alcorcón</p>
+                <p class="timeline__meta">Montaje de equipos, redes y servidores Linux y Windows.</p>
+              </li>
+            </ol>
+
+            <aside class="edu__side" aria-label="Formación actual e idiomas">
+              <div>
+                <h3 class="edu__title">Aprendiendo ahora</h3>
+                <p>Laravel, de forma autodidacta, mientras rehago la aplicación de gestión de mantenimiento.</p>
+              </div>
+              <div>
+                <h3 class="edu__title">Idiomas</h3>
+                <ul class="edu__list">
+                  <li>Español: nativo</li>
+                  <li>Inglés: B1 (Cambridge)</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section section--contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="container section__grid">
+        <h2 class="section__title" id="contacto-title">Contacto</h2>
+        <div class="section__body reveal">
+          <p class="contact__lead">¿Tienes una oferta o quieres comentarme algo? Escríbeme por email o por LinkedIn.</p>
+
+          <div class="contact__email">
+            <a class="contact__address" href="mailto:davidrsm051205@gmail.com">davidrsm051205@gmail.com</a>
+            <button class="btn btn--ghost btn--small copy-button" type="button" data-copy="davidrsm051205@gmail.com">
+              <svg class="icon copy-button__icon" aria-hidden="true"><use href="#i-copy"></use></svg>
+              <svg class="icon copy-button__done" aria-hidden="true"><use href="#i-check"></use></svg>
+              <span class="copy-button__label">Copiar email</span>
+            </button>
+            <span class="visually-hidden" role="status" aria-live="polite" data-copy-status></span>
+          </div>
+
+          <ul class="contact__links">
+            <li>
+              <a class="btn btn--ghost" href="https://www.linkedin.com/in/david-rodr%C3%ADguez-san-miguel-a2ba432a8/" target="_blank" rel="me noopener noreferrer">
+                <svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+                LinkedIn<span class="visually-hidden"> (se abre en una pestaña nueva)</span>
+              </a>
+            </li>
+            <li>
+              <a class="btn btn--ghost" href="https://github.com/DavidRodriguez05" target="_blank" rel="me noopener noreferrer">
+                <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
+                GitHub<span class="visually-hidden"> (se abre en una pestaña nueva)</span>
+              </a>
+            </li>
+            <li>
+              <a class="btn btn--primary" href="assets/cv/CV-David-Rodriguez-San-Miguel.pdf" download>
+                <svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg>
+                Descargar CV
+              </a>
+            </li>
+          </ul>
+
+          <p class="contact__note">
+            <span class="status__dot" aria-hidden="true"></span>
+            Disponible para trabajar en Madrid y alrededores, en presencial o híbrido, y también en remoto.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© <span data-year>2026</span> David Rodríguez San Miguel</p>
+      <p>Hecho con HTML, CSS y JavaScript, sin frameworks.</p>
+    </div>
+  </footer>
 </body>
 </html>
