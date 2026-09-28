@@ -101,10 +101,10 @@ En el `<div class="project__links">` del proyecto, cambia:
 data-repo-public="false"   →   data-repo-public="true"
 ```
 
-- **HabitFlow** ya está enlazado (`data-repo-public="true"`).
-- **FlowManager** tiene la URL puesta, pero sigue en `false` a propósito: el repositorio tiene que quedar limpio antes de enlazarlo desde el portfolio.
+- **HabitFlow** y **FlowManager** ya están enlazados (`data-repo-public="true"`).
+- **Gestión de mantenimiento** es código de una empresa: se queda como "Código fuente privado".
 
-⚠️ **Antes de hacer público cualquier repositorio**, comprueba que no contenga claves de API, contraseñas de base de datos, datos de usuarios reales ni información personal, **incluido el historial de commits**. En FlowManager hay una clave de OpenAI y una contraseña de base de datos que hay que revocar y quitar antes.
+⚠️ **Antes de hacer público cualquier repositorio**, comprueba que no contenga claves de API, contraseñas de base de datos, datos de usuarios reales ni información personal, **incluido el historial de commits**. Las credenciales van en un archivo que esté en `.gitignore`, como `src/config/config.php` en FlowManager.
 
 ### Añadir capturas
 
